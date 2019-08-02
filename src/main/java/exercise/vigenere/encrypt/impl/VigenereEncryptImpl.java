@@ -17,9 +17,9 @@ public class VigenereEncryptImpl extends AbstractCipher implements EncryptData {
     int keyIndex = 0;
     for (int i = 0; i < target.length(); i++) {
       if (cipherIndexMap.containsKey(target.charAt(i))) {
-        int index = (cipherIndexMap.get(target.charAt(i)) + cipherIndexMap.get(key.charAt(keyIndex))) % CIPHER_CHAR_SET.length();
+        int cipherIndex = (cipherIndexMap.get(target.charAt(i)) + cipherIndexMap.get(key.charAt(keyIndex))) % CIPHER_CHAR_SET.length();
+        res.append(CIPHER_CHAR_SET.charAt(cipherIndex));
         keyIndex = (keyIndex + 1) % key.length();
-        res.append(CIPHER_CHAR_SET.charAt(index));
       } else {
         res.append(target.charAt(i));
       }

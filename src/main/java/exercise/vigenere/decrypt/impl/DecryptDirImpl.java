@@ -37,6 +37,6 @@ public class DecryptDirImpl implements DecryptDir {
   private void createDecryptedFile(File fileEntry, String pathToDir, String key) {
     VigenereDecryptDataImpl vigenereDecrypt = new VigenereDecryptDataImpl();
     String encrypt = vigenereDecrypt.parseData(key, FileReaderUtil.readFile(fileEntry.getAbsolutePath()));
-    FileReaderUtil.createFiles(encrypt, pathToDir);
+    FileReaderUtil.createFile(encrypt, pathToDir);
   }
 }

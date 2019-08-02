@@ -38,6 +38,6 @@ public class EncryptDirImpl implements EncryptDir {
   private void createEncryptedFile(File fileEntry, String pathToDir, String key) {
     VigenereEncryptImpl vigenereEncrypt = new VigenereEncryptImpl();
     String encrypt = vigenereEncrypt.parseData(key, FileReaderUtil.readFile(fileEntry.getAbsolutePath()));
-    FileReaderUtil.createFiles(encrypt, pathToDir);
+    FileReaderUtil.createFile(encrypt, pathToDir);
   }
 }

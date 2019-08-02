@@ -16,20 +16,20 @@ public class VigenereDecryptDataImplTest {
 
   @Test
   public void testDecryptWord() {
-    String decrypt = vigenereDecryptData.parseData("encrypt", "en");
-    assertEquals("00", decrypt);
+    String result = vigenereDecryptData.parseData("encrypt", "en");
+    assertEquals("00", result);
   }
 
 
   @Test
   public void testDecryptOutsideCipherText() {
-    String decrypt = vigenereDecryptData.parseData("encrypt", "º¡¶¢");
-    assertEquals("º¡¶¢", decrypt);
+    String result = vigenereDecryptData.parseData("encrypt", "º¡¶¢");
+    assertEquals("º¡¶¢", result);
   }
 
   @Test
   public void testSpecialCharsAndCipherChars() {
-    String decrypt = vigenereDecryptData.parseData("encrypt", "eº¡¶¢n");
-    assertEquals("0º¡¶¢0", decrypt);
+    String result = vigenereDecryptData.parseData("encrypt", "eº¡¶¢n");
+    assertEquals("0º¡¶¢0", result);
   }
 }

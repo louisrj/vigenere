@@ -23,14 +23,16 @@ public class FileReaderUtil {
    * @param fileText  Input string to be inserted to file.
    * @param pathToDir Absolute path of directory where the file will be created.
    */
-  public static void createFiles(String fileText, String pathToDir) {
+  public static void createFile(String fileText, String pathToDir) {
     try {
       Path pathToFile = Paths.get(pathToDir);
+      //Do not create a file if it exists.
       if (Files.notExists(pathToFile)) {
         Files.createDirectories(pathToFile.getParent());
         Files.createFile(pathToFile);
       }
 
+      //Write to file
       BufferedWriter writer = new BufferedWriter(new FileWriter(pathToDir));
       writer.write(fileText);
       writer.close();
