@@ -37,6 +37,9 @@ public class App {
 //        } else {
 //            System.out.println("action [" + action + "] not implemented");
 //        }
+
+
+        //test comment
         App app = new App();
         app.encrypt("a");
 
