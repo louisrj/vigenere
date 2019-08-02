@@ -1,5 +1,9 @@
 package exercise.vigenere;
 
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,8 +44,9 @@ public class App {
 
         //test comment
         App app = new App();
-        System.out.println(app.encrypt("top secret", "encrypt"));
-        System.out.println(app.decrypt(app.encrypt("top secret", "encrypt"), "encrypt"));
+//        System.out.println(app.encrypt("top secret", "encrypt"));
+//        System.out.println(app.decrypt(app.encrypt("top secret", "encrypt"), "encrypt"));
+        app.encryptDir("/Users/rahuljohnlouis/Downloads/exercise-dist-vigenere/sample_dir");
 
     }
 
@@ -83,8 +88,58 @@ public class App {
                 res.append(input.charAt(i));
             }
         }
-
         return res.toString();
+    }
 
+    private void encryptDir(String pathToDir) {
+        final File folder = new File(pathToDir);
+        encryptDir(folder, pathToDir + ".encrypted");
+    }
+
+
+    private void encryptDir(File folder, String pathToDir) {
+
+        for (final File fileEntry : folder.listFiles()) {
+            if (fileEntry.isDirectory()) {
+                encryptDir(fileEntry, pathToDir + "/" + fileEntry.getName());
+            } else {
+                if (fileEntry.isFile()) {
+                    createEncryptedFile(fileEntry, pathToDir + "/" + fileEntry.getName());
+                }
+            }
+        }
+    }
+
+    private void createEncryptedFile(File fileEntry, String pathToDir) {
+        File file = new File(pathToDir);
+        String encrypt = encrypt(readFile(fileEntry.getAbsolutePath()), "encrypt");
+//        Writer writer = null;
+
+        try {
+        Path pathToFile = Paths.get(pathToDir);
+        Files.createDirectories(pathToFile.getParent());
+        Files.createFile(pathToFile);
+            BufferedWriter writer = new BufferedWriter(new FileWriter(pathToDir));
+            writer.write(encrypt);
+
+            writer.close();
+        } catch (IOException ex) {
+            System.out.println("here");
+            // Report
+        } finally {
+                System.out.println("here too");
+        }
+    }
+
+
+    private String readFile(String filePath) {
+        String content = "";
+        try {
+            content = new String(Files.readAllBytes(Paths.get(filePath)));
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        return content;
     }
 }
