@@ -1,7 +1,6 @@
 package exercise.vigenere;
 
-import com.sun.xml.internal.ws.util.ASCIIUtility;
-
+import java.util.HashMap;
 import java.util.Map;
 
 public class App {
@@ -41,13 +40,51 @@ public class App {
 
         //test comment
         App app = new App();
-        app.encrypt("a");
+        System.out.println(app.encrypt("top secret", "encrypt"));
+        System.out.println(app.decrypt(app.encrypt("top secret", "encrypt"), "encrypt"));
 
     }
 
-    private String encrypt(String target) {
-        int i  = '\n' - ' ';
-        System.out.println(i);
-        return null;
+    private String encrypt(String input, String key) {
+        Map<Character, Integer> cipherIndexMap = new HashMap<>();
+        for (int i = 0; i < CIPHER_CHAR_SET.length(); i++) {
+                cipherIndexMap.put(CIPHER_CHAR_SET.charAt(i), i);
+        }
+
+        StringBuilder res = new StringBuilder();
+        int keyIndex = 0;
+        for (int i = 0; i < input.length(); i++) {
+            if (cipherIndexMap.containsKey(input.charAt(i))) {
+                int index = (cipherIndexMap.get(input.charAt(i)) + cipherIndexMap.get(key.charAt(keyIndex))) % 26;
+                keyIndex = (keyIndex + 1) % key.length();
+                res.append(CIPHER_CHAR_SET.charAt(index));
+            } else {
+                res.append(input.charAt(i));
+            }
+        }
+
+        return res.toString();
+    }
+
+    private String decrypt(String input, String key) {
+        Map<Character, Integer> cipherIndexMap = new HashMap<>();
+        for (int i = 0; i < CIPHER_CHAR_SET.length(); i++) {
+            cipherIndexMap.put(CIPHER_CHAR_SET.charAt(i), i);
+        }
+
+        StringBuilder res = new StringBuilder();
+        int keyIndex = 0;
+        for (int i = 0; i < input.length(); i++) {
+            if (cipherIndexMap.containsKey(input.charAt(i))) {
+                int index = (cipherIndexMap.get(input.charAt(i)) - cipherIndexMap.get(key.charAt(keyIndex)) + 26 ) % 26;
+                keyIndex = (keyIndex + 1) % key.length();
+                res.append(CIPHER_CHAR_SET.charAt(index));
+            } else {
+                res.append(input.charAt(i));
+            }
+        }
+
+        return res.toString();
+
     }
 }
