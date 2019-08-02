@@ -5,6 +5,9 @@ import exercise.vigenere.encrypt.EncryptData;
 
 import java.util.Map;
 
+/**
+ * Implements {@link EncryptData} interface to encrypt a target string.
+ */
 public class VigenereEncryptImpl extends AbstractCipher implements EncryptData {
 
   @Override

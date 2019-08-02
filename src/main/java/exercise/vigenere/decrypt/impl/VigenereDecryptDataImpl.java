@@ -6,6 +6,9 @@ import exercise.vigenere.decrypt.DecryptData;
 
 import java.util.Map;
 
+/**
+ * Implements {@link DecryptData} interface to decrypt a target string.
+ */
 public class VigenereDecryptDataImpl extends AbstractCipher implements DecryptData {
 
   @Override

@@ -4,17 +4,22 @@ import exercise.vigenere.decrypt.DecryptDir;
 import exercise.vigenere.util.FileReaderUtil;
 
 import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
+/**
+ * Implementation of {@link DecryptDir} interface to decrypt files in path.
+ */
 public class DecryptDirImpl implements DecryptDir {
   private static final String DECRYPTED = ".decrypted";
   private static final String BACKSLASH = "/";
 
   @Override
   public void parseDir(String key, String pathToDir) {
-    final File folder = new File(pathToDir);
-    parseDir(folder, pathToDir + DECRYPTED, key);
+    if (FileReaderUtil.exists(pathToDir)) {
+      final File folder = new File(pathToDir);
+      parseDir(folder, pathToDir + DECRYPTED, key);
+    } else {
+      System.out.println("Target path does not exist.");
+    }
   }
 
   private void parseDir(File folder, String pathToDir, String key) {

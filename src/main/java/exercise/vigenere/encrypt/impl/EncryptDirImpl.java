@@ -5,6 +5,9 @@ import exercise.vigenere.util.FileReaderUtil;
 
 import java.io.File;
 
+/**
+ * Implementation of {@link EncryptDir} interface to encrypt files from input directory path.
+ */
 public class EncryptDirImpl implements EncryptDir {
 
   private static final String ENCRYPTED = ".encrypted";
@@ -12,8 +15,12 @@ public class EncryptDirImpl implements EncryptDir {
 
   @Override
   public void parseDir(String key, String pathToDir) {
-    final File folder = new File(pathToDir);
-    encryptDir(folder, pathToDir + ENCRYPTED, key);
+    if (FileReaderUtil.exists(pathToDir)) {
+      final File folder = new File(pathToDir);
+      encryptDir(folder, pathToDir + ENCRYPTED, key);
+    } else {
+      System.out.println("Target path does not exist.");
+    }
   }
 
   private void encryptDir(File folder, String pathToDir, String key) {

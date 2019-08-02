@@ -8,7 +8,6 @@ import exercise.vigenere.encrypt.EncryptData;
 import exercise.vigenere.encrypt.EncryptDir;
 import exercise.vigenere.encrypt.impl.EncryptDirImpl;
 import exercise.vigenere.encrypt.impl.VigenereEncryptImpl;
-import exercise.vigenere.util.FileReaderUtil;
 
 public class App {
 
@@ -49,24 +48,12 @@ public class App {
   }
 
   private static void encryptDir(String key, String pathToDir) {
-    if (FileReaderUtil.exists(pathToDir)) {
-      EncryptDir encryptDir = new EncryptDirImpl();
-      encryptDir.parseDir(key, pathToDir);
-      System.out.println("Directory encrypted.");
-    } else {
-      System.out.println("Target path does not exist.");
-    }
-
+    EncryptDir encryptDir = new EncryptDirImpl();
+    encryptDir.parseDir(key, pathToDir);
   }
 
   private static void decryptDir(String key, String pathToDir) {
-    if (FileReaderUtil.exists(pathToDir)) {
-      DecryptDir decryptDir = new DecryptDirImpl();
-      decryptDir.parseDir(key, pathToDir);
-      System.out.println("Directory decrypted.");
-    } else {
-      System.out.println("Target path does not exist.");
-    }
+    DecryptDir decryptDir = new DecryptDirImpl();
+    decryptDir.parseDir(key, pathToDir);
   }
-
 }
