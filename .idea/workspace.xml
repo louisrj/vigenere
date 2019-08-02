@@ -1,39 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2616df7-4b77-43cf-b8a5-1cf73eacbb36" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample_dir/abcde.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample_dir/dummy.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample_dir/folder1/folder1-1/folder1-1-sample1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample_dir/folder1/folder1-1/folder1-1-sample2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample_dir/folder1/folder1-1/folder1-1-sample3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample_dir/folder1/folder1-1/folder1-1-sample4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample_dir/folder1/folder1-sample1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample_dir/folder1/folder1-sample2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/do-package" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/do-run" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/AbstractCipher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/DecryptImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/EncryptImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/exercise/vigenere/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/exercise/vigenere/AbstractCipher.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/exercise/vigenere/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/exercise/vigenere/DecryptImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/exercise/vigenere/EncryptImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/exercise/vigenere/AppTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="f2616df7-4b77-43cf-b8a5-1cf73eacbb36" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,6 +94,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>spa</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -248,12 +221,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564702717961</updated>
-      <workItem from="1564702725046" duration="4274000" />
+      <workItem from="1564702725046" duration="4486000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1564715951564</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564715951564</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4274000" />
+    <option name="totallyTimeSpent" value="4486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-113" y="-1050" width="1680" height="1050" extended-state="0" />
@@ -263,7 +244,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21306472" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21306472" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" weight="0.3291536" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -273,7 +254,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27795193" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27795193" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -291,6 +272,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
