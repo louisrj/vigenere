@@ -5,9 +5,9 @@ Vigenère cipher
 ---------------
 A Vigenère cipher is a polyalphabetic substitution cipher.  It is done by choosing the rotating substitution mappings with the given encryption **key** and a **source character set**. Any characters outside of the source character set will be copied as-is.
 
-To illustrate how it works, consider the following example where the key is **"encryptImpl"** and the source character set is the lowercase alphabet letters **[a-z]**. In this example, we will encryptImpl the input string **"top secret"**.
+To illustrate how it works, consider the following example where the key is **"vigenereEncryptImpl"** and the source character set is the lowercase alphabet letters **[a-z]**. In this example, we will vigenereEncryptImpl the input string **"top secret"**.
 
-The characters in the encryption key, "encryptImpl", determines the sequence of character mappings.  Each mapping in the sequence is calculated with the characters from the encryption key by shifting the character set to the character of the key to produce the mapping from the input character to the cipher character. 
+The characters in the encryption key, "vigenereEncryptImpl", determines the sequence of character mappings.  Each mapping in the sequence is calculated with the characters from the encryption key by shifting the character set to the character of the key to produce the mapping from the input character to the cipher character. 
 
 ```text
                      Source Character Set
@@ -58,11 +58,11 @@ The process needs to be reversible: the encrypted text can be decrypted with the
 
 The main method, and your implementation, should take exactly 3 parameters - [action] [key] [target].
 
-* [action]: case insensitive values of either *encryptImpl*, *decryptImpl*, *encryptDir*, or *decryptDir*
-* [key]: string of any character sequence to be used as the Vigenère encryptImpl key
+* [action]: case insensitive values of either *vigenereEncryptImpl*, *decryptImpl*, *encryptDir*, or *decryptDir*
+* [key]: string of any character sequence to be used as the Vigenère vigenereEncryptImpl key
 * [target]: 
-     * For *encryptImpl* / *decryptImpl* actions: the value is the input text to be processed.  For your output, perform the action and output the result, and only the result, using `System.out.println`.
-     * For *encryptDir* / *decryptDir* actions: the value is a directory path where all the files to be processed. Your code must read and encryptImpl / decryptImpl each file in the directory and any files in any sub directories. There can be nested directories. For your output, create a new directory at the same level of the top directory for the by appending the top directory name with ".encrypted" or ".decrypted".  Keep the file / directory names the same for anything under the top directory.
+     * For *vigenereEncryptImpl* / *decryptImpl* actions: the value is the input text to be processed.  For your output, perform the action and output the result, and only the result, using `System.out.println`.
+     * For *encryptDir* / *decryptDir* actions: the value is a directory path where all the files to be processed. Your code must read and vigenereEncryptImpl / decryptImpl each file in the directory and any files in any sub directories. There can be nested directories. For your output, create a new directory at the same level of the top directory for the by appending the top directory name with ".encrypted" or ".decrypted".  Keep the file / directory names the same for anything under the top directory.
        * Example: If top directory path is "/path/to/directory" and [action] is *encrypted*, then the output results will be written to a directory at path "/path/to/directory.encrypted".
  
 Your code must also meet the following assumptions.  When you feel anything is ambiguous, please feel free to make additional reasonable assumptions.  Please document your assumptions in the code so the reviewer knows any additional assumptions you made:
@@ -76,11 +76,11 @@ Your code must also meet the following assumptions.  When you feel anything is a
 
 To be considered correct, your outputs must have formats that matches the following samples. All output examples refer to the sample source character set [a-z] above, and is not what your code actual output will be.
 
-1. For parameters: [action] = *encryptImpl*, [key] = *encryptImpl*, [target] = *top secret*, the output format should be:
+1. For parameters: [action] = *vigenereEncryptImpl*, [key] = *vigenereEncryptImpl*, [target] = *top secret*, the output format should be:
    ```
    xbr jcrkig
    ```
-2. For parameters: [action] = *decryptImpl*, [key] = *encryptImpl*, [target] = *xbr jcrkig*, the output format should be:
+2. For parameters: [action] = *decryptImpl*, [key] = *vigenereEncryptImpl*, [target] = *xbr jcrkig*, the output format should be:
    ```
    top secret
    ```
@@ -99,7 +99,7 @@ To be considered correct, your outputs must have formats that matches the follow
    top secret
    ```
    
-   After executing parameters: [action] = *encryptDir*, [key] = *encryptImpl*, [target] = */path/to/directory*, the directory structure and text formats should now look as follow:
+   After executing parameters: [action] = *encryptDir*, [key] = *vigenereEncryptImpl*, [target] = */path/to/directory*, the directory structure and text formats should now look as follow:
    ```
    $ ls -a /path/to
    directory    directory.encrypted

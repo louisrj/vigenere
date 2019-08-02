@@ -1,145 +1,72 @@
 package exercise.vigenere;
 
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.Map;
+import exercise.vigenere.decrypt.DecryptData;
+import exercise.vigenere.decrypt.DecryptDir;
+import exercise.vigenere.decrypt.impl.DecryptDirImpl;
+import exercise.vigenere.decrypt.impl.VigenereDecryptDataImpl;
+import exercise.vigenere.encrypt.EncryptData;
+import exercise.vigenere.encrypt.EncryptDir;
+import exercise.vigenere.encrypt.impl.EncryptDirImpl;
+import exercise.vigenere.encrypt.impl.VigenereEncryptImpl;
+import exercise.vigenere.util.FileReaderUtil;
 
 public class App {
 
-    public static final String CIPHER_CHAR_SET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz \t\n\r~!@#$%^&*()_+-=[]\\{}|;':\",./<>?";
-    public static final String CIPHER_CHAR_SET_A = "abcdefghijklmnopqrstuvwxyz";
+  public static final String CIPHER_CHAR_SET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz \t\n\r~!@#$%^&*()_+-=[]\\{}|;':\",./<>?";
 
-
-
-    public static void main(String args[]) {
-//        if (args.length != 3) {
-//            System.out.println("Exact 3 parameters required - [action] [key] [target]");
-//            System.exit(1);
-//        }
-//
-//        String action, key, target;
-//        action = args[0];
-//        key = args[1];
-//        target = args[2];
-//
-//        EncryptImpl encryptImpl = new EncryptImpl();
-//        DecryptImpl decryptImpl = new DecryptImpl();
-//
-//        if ("encryptImpl".equalsIgnoreCase(action)) {
-//            EncryptImpl.encryptWords("top secret");
-//            System.out.println("encryptImpl [" + key + "], [" + target + "]");
-//        } else if ("decryptImpl".equalsIgnoreCase(action)) {
-//            System.out.println("decryptImpl [" + key + "], [" + target + "]");
-//        } else if ("encryptDir".equalsIgnoreCase(action)) {
-//            System.out.println("encryptDir [" + key + "], [" + target + "]");
-//        } else if ("decryptDir".equalsIgnoreCase(action)) {
-//            System.out.println("decryptDir [" + key + "], [" + target + "]");
-//        } else {
-//            System.out.println("action [" + action + "] not implemented");
-//        }
-
-
-        //test comment
-        App app = new App();
-//        System.out.println(app.encrypt("top secret", "encrypt"));
-//        System.out.println(app.decrypt(app.encrypt("top secret", "encrypt"), "encrypt"));
-        app.encryptDir("/Users/rahuljohnlouis/Downloads/exercise-dist-vigenere/sample_dir");
-
+  public static void main(String args[]) {
+    if (args.length != 3) {
+      System.out.println("Exact 3 parameters required - [action] [key] [target]");
+      System.exit(1);
     }
 
-    private String encrypt(String input, String key) {
-        Map<Character, Integer> cipherIndexMap = new HashMap<>();
-        for (int i = 0; i < CIPHER_CHAR_SET.length(); i++) {
-                cipherIndexMap.put(CIPHER_CHAR_SET.charAt(i), i);
-        }
+    String action, key, target;
+    action = args[0];
+    key = args[1];
+    target = args[2];
 
-        StringBuilder res = new StringBuilder();
-        int keyIndex = 0;
-        for (int i = 0; i < input.length(); i++) {
-            if (cipherIndexMap.containsKey(input.charAt(i))) {
-                int index = (cipherIndexMap.get(input.charAt(i)) + cipherIndexMap.get(key.charAt(keyIndex))) % 26;
-                keyIndex = (keyIndex + 1) % key.length();
-                res.append(CIPHER_CHAR_SET.charAt(index));
-            } else {
-                res.append(input.charAt(i));
-            }
-        }
+    if ("encrypt".equalsIgnoreCase(action)) {
+      encryptData(key, target);
+    } else if ("decrypt".equalsIgnoreCase(action)) {
+      decryptData(key, target);
+    } else if ("encryptDir".equalsIgnoreCase(action)) {
+      encryptDir(key, target);
+    } else if ("decryptDir".equalsIgnoreCase(action)) {
+      decryptDir(key, target);
+    } else {
+      System.out.println("action [" + action + "] not implemented");
+    }
+  }
 
-        return res.toString();
+  private static void encryptData(String key, String target) {
+    EncryptData encryptData = new VigenereEncryptImpl();
+    System.out.println(encryptData.parseData(key, target));
+  }
+
+  private static void decryptData(String key, String target) {
+    DecryptData decryptData = new VigenereDecryptDataImpl();
+    System.out.println(decryptData.parseData(key, target));
+  }
+
+  private static void encryptDir(String key, String pathToDir) {
+    if (FileReaderUtil.exists(pathToDir)) {
+      EncryptDir encryptDir = new EncryptDirImpl();
+      encryptDir.parseDir(key, pathToDir);
+      System.out.println("Directory encrypted.");
+    } else {
+      System.out.println("Target path does not exist.");
     }
 
-    private String decrypt(String input, String key) {
-        Map<Character, Integer> cipherIndexMap = new HashMap<>();
-        for (int i = 0; i < CIPHER_CHAR_SET.length(); i++) {
-            cipherIndexMap.put(CIPHER_CHAR_SET.charAt(i), i);
-        }
+  }
 
-        StringBuilder res = new StringBuilder();
-        int keyIndex = 0;
-        for (int i = 0; i < input.length(); i++) {
-            if (cipherIndexMap.containsKey(input.charAt(i))) {
-                int index = (cipherIndexMap.get(input.charAt(i)) - cipherIndexMap.get(key.charAt(keyIndex)) + 26 ) % 26;
-                keyIndex = (keyIndex + 1) % key.length();
-                res.append(CIPHER_CHAR_SET.charAt(index));
-            } else {
-                res.append(input.charAt(i));
-            }
-        }
-        return res.toString();
+  private static void decryptDir(String key, String pathToDir) {
+    if (FileReaderUtil.exists(pathToDir)) {
+      DecryptDir decryptDir = new DecryptDirImpl();
+      decryptDir.parseDir(key, pathToDir);
+      System.out.println("Directory decrypted.");
+    } else {
+      System.out.println("Target path does not exist.");
     }
+  }
 
-    private void encryptDir(String pathToDir) {
-        final File folder = new File(pathToDir);
-        encryptDir(folder, pathToDir + ".encrypted");
-    }
-
-
-    private void encryptDir(File folder, String pathToDir) {
-
-        for (final File fileEntry : folder.listFiles()) {
-            if (fileEntry.isDirectory()) {
-                encryptDir(fileEntry, pathToDir + "/" + fileEntry.getName());
-            } else {
-                if (fileEntry.isFile()) {
-                    createEncryptedFile(fileEntry, pathToDir + "/" + fileEntry.getName());
-                }
-            }
-        }
-    }
-
-    private void createEncryptedFile(File fileEntry, String pathToDir) {
-        File file = new File(pathToDir);
-        String encrypt = encrypt(readFile(fileEntry.getAbsolutePath()), "encrypt");
-//        Writer writer = null;
-
-        try {
-        Path pathToFile = Paths.get(pathToDir);
-        Files.createDirectories(pathToFile.getParent());
-        Files.createFile(pathToFile);
-            BufferedWriter writer = new BufferedWriter(new FileWriter(pathToDir));
-            writer.write(encrypt);
-
-            writer.close();
-        } catch (IOException ex) {
-            System.out.println("here");
-            // Report
-        } finally {
-                System.out.println("here too");
-        }
-    }
-
-
-    private String readFile(String filePath) {
-        String content = "";
-        try {
-            content = new String(Files.readAllBytes(Paths.get(filePath)));
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-        return content;
-    }
 }
