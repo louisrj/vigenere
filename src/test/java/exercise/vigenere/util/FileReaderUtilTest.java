@@ -46,5 +46,4 @@ public class FileReaderUtilTest {
     FileReaderUtil.createFile("abc", filePath);
     Assert.assertTrue(FileReaderUtil.isAllowableFile(new File(filePath)));
   }
-
 }
