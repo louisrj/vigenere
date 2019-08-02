@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2616df7-4b77-43cf-b8a5-1cf73eacbb36" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/decrypt/DecryptData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/decrypt/impl/DecryptDirImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/decrypt/impl/VigenereDecryptDataImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/encrypt/EncryptData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/encrypt/EncryptDir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/encrypt/impl/EncryptDirImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/encrypt/impl/VigenereEncryptImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/util/FileReaderUtil.java" afterDir="false" />
+    <list default="true" id="f2616df7-4b77-43cf-b8a5-1cf73eacbb36" name="Default Changelist" comment="cleaned and reformatted code">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_dir/folder1/folder1-sample1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample_dir/folder1/folder1-sample1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/vigenere/AbstractCipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/AbstractCipher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/vigenere/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/vigenere/DecryptImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise/vigenere/decrypt/DecryptDir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/vigenere/EncryptImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exercise/vigenere/AbstractCipher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/exercise/vigenere/AbstractCipher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exercise/vigenere/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/exercise/vigenere/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exercise/vigenere/DecryptImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exercise/vigenere/EncryptImpl.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,14 +19,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/exercise/vigenere/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample_dir.encrypted/folder1/folder1-sample1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="2" selection-start-column="2" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample_dir/folder1/folder1-sample1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="2" selection-start-column="2" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample_dir.decrypted/folder1/folder1-sample1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -70,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/exercise/vigenere/util/FileReaderUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="57" column="3" lean-forward="true" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
+              <caret line="57" column="3" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1546#1547#0" expanded="true" />
@@ -81,52 +97,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/exercise/vigenere/decrypt/DecryptDir.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/exercise/vigenere/decrypt/impl/DecryptDirImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="89">
               <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample_dir.decrypted/folder1/folder1-sample1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/exercise/vigenere/decrypt/impl/VigenereDecryptDataImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/exercise/vigenere/encrypt/impl/VigenereEncryptImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,7 +153,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/exercise/vigenere/Encrypt.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/vigenere/EncryptImpl.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/vigenere/VigenereEncryptImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/vigenere/VigenereDecryptImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/vigenere/DecryptDirImpl.java" />
@@ -193,13 +166,31 @@
         <option value="$PROJECT_DIR$/src/main/java/exercise/vigenere/decrypt/impl/VigenereDecryptDataImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/vigenere/encrypt/EncryptDir.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/vigenere/decrypt/DecryptDir.java" />
-        <option value="$PROJECT_DIR$/sample_dir/folder1/folder1-sample1.txt" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/vigenere/util/FileReaderUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/vigenere/encrypt/impl/EncryptDirImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/vigenere/decrypt/impl/DecryptDirImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/vigenere/App.java" />
+        <option value="$PROJECT_DIR$/sample_dir.encrypted/folder1/folder1-sample1.txt" />
+        <option value="$PROJECT_DIR$/sample_dir/folder1/folder1-sample1.txt" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="vigenere" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="vigenere" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1440" />
@@ -286,7 +277,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564702717961</updated>
-      <workItem from="1564702725046" duration="34191000" />
+      <workItem from="1564702725046" duration="35687000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1564715951564</created>
@@ -316,11 +307,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564728477176</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="cleaned and reformatted code">
+      <created>1564761588394</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1564761588394</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34191000" />
+    <option name="totallyTimeSpent" value="35687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -330,16 +328,16 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" sideWeight="0.49928468" visible="true" weight="0.32961586" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.4985694" visible="true" weight="0.33209416" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5007153" side_tool="true" visible="true" weight="0.32961586" />
+      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50143063" side_tool="true" visible="true" weight="0.33209416" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" sideWeight="0.49785408" weight="0.3283767" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.8576538" weight="0.32961586" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.8569385" weight="0.32961586" />
       <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.65808296" weight="0.39900866" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3291536" />
@@ -349,7 +347,7 @@
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.3297568" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Commander" order="6" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
@@ -364,7 +362,8 @@
     <MESSAGE value="This works" />
     <MESSAGE value="encrypt, decrypt including chars outside the cipher text" />
     <MESSAGE value="encryptDir" />
-    <option name="LAST_COMMIT_MESSAGE" value="encryptDir" />
+    <MESSAGE value="cleaned and reformatted code" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned and reformatted code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -457,13 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -575,27 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample_dir.encrypted/folder1/folder1-sample1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample_dir/folder1/folder1-sample1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample_dir.decrypted/folder1/folder1-sample1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/exercise/vigenere/decrypt/DecryptDir.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -640,7 +611,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/exercise/vigenere/util/FileReaderUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="57" column="3" lean-forward="true" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
+          <caret line="57" column="3" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1546#1547#0" expanded="true" />
@@ -671,11 +642,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/exercise/vigenere/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample_dir.encrypted/folder1/folder1-sample1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample_dir/folder1/folder1-sample1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample_dir.decrypted/folder1/folder1-sample1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
         </state>
       </provider>
     </entry>

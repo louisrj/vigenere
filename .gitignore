@@ -1,4 +1,7 @@
-.idea/*
 *.iml
 *.log
 target/
+sample_dir/
+sample_dir.decrypted/
+sample_dir.encrypted/
+.idea/*
